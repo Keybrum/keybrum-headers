@@ -1,0 +1,40 @@
+name: Security headers check
+description: Grade the HTTP security headers of a URL from A+ to F, write the report to the job summary, and fail the job below a minimum grade.
+author: Keybrum
+branding:
+  icon: shield
+  color: gray-dark
+inputs:
+  url:
+    description: The address to check, for example the preview URL of the deployment or https://your-app.com.
+    required: true
+  min-grade:
+    description: Fail the job when the grade is below this one (A+, A, B, C or D). Leave empty to report without failing.
+    required: false
+    default: ""
+  fix:
+    description: Add the config that sets the missing headers to the report. One of nextjs, vercel, netlify, cloudflare, nginx.
+    required: false
+    default: ""
+  timeout:
+    description: Time allowed per request, in milliseconds.
+    required: false
+    default: "10000"
+outputs:
+  grade:
+    description: The grade, from A+ to F.
+    value: ${{ steps.check.outputs.grade }}
+  score:
+    description: The score out of 100.
+    value: ${{ steps.check.outputs.score }}
+runs:
+  using: composite
+  steps:
+    - id: check
+      shell: bash
+      env:
+        INPUT_URL: ${{ inputs.url }}
+        INPUT_MIN_GRADE: ${{ inputs.min-grade }}
+        INPUT_FIX: ${{ inputs.fix }}
+        INPUT_TIMEOUT: ${{ inputs.timeout }}
+      run: node "$GITHUB_ACTION_PATH/bin/action.js"

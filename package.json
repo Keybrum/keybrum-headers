@@ -1,0 +1,47 @@
+{
+  "name": "keybrum-headers",
+  "version": "1.0.0",
+  "description": "Grade the HTTP security headers of any web address from A+ to F, on localhost, staging or production, and print the config that fixes them. Zero dependencies.",
+  "type": "module",
+  "bin": {
+    "keybrum-headers": "bin/keybrum-headers.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "action.yml"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "security-headers",
+    "http-headers",
+    "content-security-policy",
+    "csp",
+    "hsts",
+    "cors",
+    "security",
+    "cli",
+    "github-action",
+    "nextjs",
+    "vercel",
+    "netlify"
+  ],
+  "homepage": "https://keybrum.com/tools/security-headers-checker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlouvart/keybrum-headers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tlouvart/keybrum-headers/issues"
+  },
+  "author": "Keybrum (https://keybrum.com)",
+  "license": "MIT"
+}
