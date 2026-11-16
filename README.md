@@ -11,14 +11,14 @@ It applies the same rules as the [security headers checker on keybrum.com](https
 Node 20 or later.
 
 ```bash
-npx github:tlouvart/keybrum-headers your-app.com
-npx github:tlouvart/keybrum-headers localhost:3000 --fix nextjs
+npx keybrum-headers your-app.com
+npx keybrum-headers localhost:3000 --fix nextjs
 ```
 
 Or install it once:
 
 ```bash
-npm install -g github:tlouvart/keybrum-headers
+npm install -g keybrum-headers
 keybrum-headers your-app.com
 ```
 
@@ -162,7 +162,7 @@ Outputs: `grade` and `score`.
 ### Any other CI
 
 ```bash
-npx github:tlouvart/keybrum-headers https://staging.your-app.com --min-grade B
+npx keybrum-headers https://staging.your-app.com --min-grade B
 ```
 
 Exit code 0 when the grade is at least `--min-grade`, 1 when it is below, 2 when the address could not be loaded.
