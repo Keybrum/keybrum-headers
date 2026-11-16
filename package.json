@@ -1,6 +1,6 @@
 {
   "name": "keybrum-headers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Grade the HTTP security headers of any web address from A+ to F, on localhost, staging or production, and print the config that fixes them. Zero dependencies.",
   "type": "module",
   "bin": {
@@ -37,10 +37,10 @@
   "homepage": "https://keybrum.com/tools/security-headers-checker",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tlouvart/keybrum-headers.git"
+    "url": "git+https://github.com/Keybrum/keybrum-headers.git"
   },
   "bugs": {
-    "url": "https://github.com/tlouvart/keybrum-headers/issues"
+    "url": "https://github.com/Keybrum/keybrum-headers/issues"
   },
   "author": "Keybrum (https://keybrum.com)",
   "license": "MIT"

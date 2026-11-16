@@ -141,7 +141,7 @@ Two rules sit on top of the score. No A while a "Fix first" finding is open, bec
 ### GitHub Action
 
 ```yaml
-- uses: tlouvart/keybrum-headers@v1
+- uses: Keybrum/keybrum-headers@v1
   with:
     url: ${{ steps.deploy.outputs.preview-url }}
     min-grade: B

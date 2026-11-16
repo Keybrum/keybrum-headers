@@ -7,7 +7,7 @@ import { CORS_PROBE_ORIGIN, findMetaCsp, hideCookieValue } from "./analyze.js";
 // Each request closes its connection: three requests gain nothing from keep-alive, and an idle
 // socket would keep the process waiting after the report is printed.
 const BROWSER_LIKE = {
-  "user-agent": "Mozilla/5.0 (compatible; keybrum-headers/1.0; +https://github.com/tlouvart/keybrum-headers)",
+  "user-agent": "Mozilla/5.0 (compatible; keybrum-headers/1.0; +https://github.com/Keybrum/keybrum-headers)",
   accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
   connection: "close",
 };
